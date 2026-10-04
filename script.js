@@ -48,3 +48,8 @@ function updateTaskCount() {
 function saveTasks() {
     localStorage.setItem("wolfmodeTasks", taskList.innerHTML);
 }
+function loadTasks() {
+    taskList.innerHTML = localStorage.getItem("wolfmodeTasks") || "";
+    updateTaskCount();
+}
+loadTasks();
