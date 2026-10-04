@@ -16,6 +16,9 @@ checkbox.type = "checkbox";
 const taskLabel = document.createElement("span");
 taskLabel.textContent = taskText;
 
+const deleteButton = document.createElement("button");
+deleteButton.textContent = "DELETE";
+
 checkbox.addEventListener("change", function () {
     taskItem.classList.toggle("completed", checkbox.checked);
     updateTaskCount();
