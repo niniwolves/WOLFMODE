@@ -1,14 +1,20 @@
 body {
     margin: 0;
-    padding: 40px;
+    padding: 40px 20px;
     background: #0B0B0B;
     color: #F5F5F5;
     font-family: Arial, sans-serif;
-    text-align: center;
+}
+
+.app {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 h1 {
-    color: #D4AF37;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
 .white {
@@ -18,4 +24,52 @@ h1 {
 .gold {
     color: #D4AF37;
 }
+
+.tagline {
+    text-align: center;
+    color: #999999;
+    margin-bottom: 40px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 14px;
+    background: #151515;
+    border: 1px solid #333333;
+    color: #F5F5F5;
+    font-size: 16px;
+}
+
+.task-input button {
+    padding: 14px 22px;
+    background: #D4AF37;
+    border: none;
+    color: #111111;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tasks {
+    margin-top: 40px;
+}
+
+.tasks h2 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #D4AF37;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskCount {
+    color: #777777;
+    margin-top: 25px;
 }
