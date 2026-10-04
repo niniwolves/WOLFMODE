@@ -45,3 +45,6 @@ function updateTaskCount() {
 
     taskCount.textContent = remainingTasks + " tasks remaining";
 }
+function saveTasks() {
+    localStorage.setItem("wolfmodeTasks", taskList.innerHTML);
+}
