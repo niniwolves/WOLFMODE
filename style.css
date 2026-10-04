@@ -73,3 +73,13 @@ h1 {
     color: #777777;
     margin-top: 25px;
 }
+#taskList li {
+    padding: 14px 0;
+    border-bottom: 1px solid #222222;
+    cursor: pointer;
+}
+
+#taskList li.completed {
+    color: #777777;
+    text-decoration: line-through;
+}
