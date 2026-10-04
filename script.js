@@ -18,3 +18,8 @@ addTaskButton.addEventListener("click", function () {
 
     updateTaskCount();
 });
+function updateTaskCount() {
+    const count = taskList.children.length;
+
+    taskCount.textContent = count + " tasks remaining";
+}
