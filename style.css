@@ -93,3 +93,17 @@ h1 {
     color: #777777;
     text-decoration: line-through;
 }
+#taskList button {
+    margin-left: auto;
+    padding: 6px 10px;
+    background: transparent;
+    border: 1px solid #444444;
+    color: #888888;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+#taskList button:hover {
+    border-color: #D4AF37;
+    color: #D4AF37;
+}
