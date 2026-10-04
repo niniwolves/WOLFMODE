@@ -94,7 +94,7 @@ h1 {
     text-decoration: line-through;
 }
 #taskList button {
-    margin-left: auto;
+    margin-left: 0;
     padding: 6px 10px;
     background: transparent;
     border: 1px solid #444444;
