@@ -74,12 +74,21 @@ h1 {
     margin-top: 25px;
 }
 #taskList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 14px 0;
     border-bottom: 1px solid #222222;
+}
+
+#taskList input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #D4AF37;
     cursor: pointer;
 }
 
-#taskList li.completed {
+#taskList li.completed span {
     color: #777777;
     text-decoration: line-through;
 }
