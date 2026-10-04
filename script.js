@@ -50,6 +50,25 @@ function saveTasks() {
 }
 function loadTasks() {
     taskList.innerHTML = localStorage.getItem("wolfmodeTasks") || "";
+
+    const tasks = taskList.querySelectorAll("li");
+
+    tasks.forEach(function (taskItem) {
+        const checkbox = taskItem.querySelector("input");
+        const deleteButton = taskItem.querySelector("button");
+
+        checkbox.addEventListener("change", function () {
+            taskItem.classList.toggle("completed", checkbox.checked);
+            saveTasks();
+            updateTaskCount();
+        });
+
+        deleteButton.addEventListener("click", function () {
+            taskItem.remove();
+            saveTasks();
+            updateTaskCount();
+        });
+    });
+
     updateTaskCount();
 }
-loadTasks();
