@@ -72,3 +72,4 @@ function loadTasks() {
 
     updateTaskCount();
 }
+loadTasks();
