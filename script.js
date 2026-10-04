@@ -33,6 +33,7 @@ taskItem.appendChild(taskLabel);
 taskItem.appendChild(deleteButton);
 
 taskList.appendChild(taskItem);
+saveTasks();
 
 taskInput.value = "";
 
