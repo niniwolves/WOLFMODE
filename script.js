@@ -18,6 +18,10 @@ taskLabel.textContent = taskText;
 
 const deleteButton = document.createElement("button");
 deleteButton.textContent = "DELETE";
+deleteButton.addEventListener("click", function () {
+    taskItem.remove();
+    updateTaskCount();
+});
 
 checkbox.addEventListener("change", function () {
     taskItem.classList.toggle("completed", checkbox.checked);
