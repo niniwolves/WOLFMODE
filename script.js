@@ -8,22 +8,18 @@ addTaskButton.addEventListener("click", function () {
     if (taskText === "") {
         return;
     }
-
     const taskItem = document.createElement("li");
-    taskItem.textContent = taskText;
-    taskItem.addEventListener("click", function () {
-    taskItem.classList.toggle("completed");
+
+const checkbox = document.createElement("input");
+checkbox.type = "checkbox";
+
+const taskLabel = document.createElement("span");
+taskLabel.textContent = taskText;
+
+checkbox.addEventListener("change", function () {
+    taskItem.classList.toggle("completed", checkbox.checked);
     updateTaskCount();
 });
 
-    taskList.appendChild(taskItem);
-
-    taskInput.value = "";
-
-    updateTaskCount();
-});
-function updateTaskCount() {
-    const remainingTasks = taskList.querySelectorAll("li:not(.completed)").length;
-
-    taskCount.textContent = remainingTasks + " tasks remaining";
-}
+taskItem.appendChild(checkbox);
+taskItem.appendChild(taskLabel);
