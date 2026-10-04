@@ -34,7 +34,7 @@ checkbox.addEventListener("change", function () {
 
 taskItem.appendChild(checkbox);
 taskItem.appendChild(taskLabel);
-taskItem.appendChild(editbuton);
+taskItem.appendChild(editbutton);
 taskItem.appendChild(deleteButton);
 
 taskList.appendChild(taskItem);
