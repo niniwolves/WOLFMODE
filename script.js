@@ -29,3 +29,10 @@ taskList.appendChild(taskItem);
 taskInput.value = "";
 
 updateTaskCount();
+});
+
+function updateTaskCount() {
+    const remainingTasks = taskList.querySelectorAll("li:not(.completed)").length;
+
+    taskCount.textContent = remainingTasks + " tasks remaining";
+}
