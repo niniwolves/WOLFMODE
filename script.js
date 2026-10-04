@@ -11,6 +11,10 @@ addTaskButton.addEventListener("click", function () {
 
     const taskItem = document.createElement("li");
     taskItem.textContent = taskText;
+    taskItem.addEventListener("click", function () {
+    taskItem.classList.toggle("completed");
+    updateTaskCount();
+});
 
     taskList.appendChild(taskItem);
 
