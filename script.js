@@ -23,3 +23,9 @@ checkbox.addEventListener("change", function () {
 
 taskItem.appendChild(checkbox);
 taskItem.appendChild(taskLabel);
+
+taskList.appendChild(taskItem);
+
+taskInput.value = "";
+
+updateTaskCount();
