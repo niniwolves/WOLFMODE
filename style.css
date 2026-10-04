@@ -73,6 +73,7 @@ h1 {
     color: #777777;
     margin-top: 25px;
 }
+
 #taskList li {
     display: flex;
     align-items: center;
