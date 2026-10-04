@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>WOLFMODE</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1><span class="white">WOLF</span><span class="gold">MODE</span></h1>
+    <main class="app">
+
+        <h1>
+            <span class="white">WOLF</span><span class="gold">MODE</span>
+        </h1>
+
+        <p class="tagline">Stay focused. Get it done.</p>
+
+        <div class="task-input">
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="What needs to be done?"
+            >
+
+            <button id="addTask">ADD</button>
+        </div>
+
+        <section class="tasks">
+
+            <h2>TODAY</h2>
+
+            <ul id="taskList">
+            </ul>
+
+        </section>
+
+        <p id="taskCount">0 tasks remaining</p>
+
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
