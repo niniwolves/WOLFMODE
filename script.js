@@ -70,16 +70,41 @@ function loadTasks() {
 
     tasks.forEach(function (taskItem) {
         const checkbox = taskItem.querySelector("input");
-        const deleteButton = taskItem.querySelector("button");
 
-        checkbox.addEventListener("change", function () {
-            taskItem.classList.toggle("completed", checkbox.checked);
+        const buttons = taskItem.querySelectorAll("button");
+        const editButton = buttons[0];
+        const deleteButton = buttons[1];
+
+        editButton.addEventListener("click", function () {
+            const taskLabel = taskItem.querySelector("span");
+
+            const newTask = prompt(
+                "Edit your task:",
+                taskLabel.textContent
+            );
+
+            if (newTask === null || newTask.trim() === "") {
+                return;
+            }
+
+            taskLabel.textContent = newTask.trim();
+
             saveTasks();
-            updateTaskCount();
         });
 
         deleteButton.addEventListener("click", function () {
             taskItem.remove();
+
+            saveTasks();
+            updateTaskCount();
+        });
+
+        checkbox.addEventListener("change", function () {
+            taskItem.classList.toggle(
+                "completed",
+                checkbox.checked
+            );
+
             saveTasks();
             updateTaskCount();
         });
