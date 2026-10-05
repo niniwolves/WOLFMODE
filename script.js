@@ -21,6 +21,16 @@ deleteButton.textContent = "DELETE";
 
 const editButton = document.createElement("button");
 editButton.textContent = "EDIT";
+editButton.addEventListener("click", function () {
+    const newTask = prompt("Edit your task:", taskLabel.textContent);
+
+    if (newTask === null || newTask.trim() === "") {
+        return;
+    }
+
+    taskLabel.textContent = newTask.trim();
+    saveTasks();
+});
 
 deleteButton.addEventListener("click", function () {
     taskItem.remove();
