@@ -70,14 +70,30 @@ function loadTasks() {
 
     tasks.forEach(function (taskItem) {
         const checkbox = taskItem.querySelector("input");
-
+        const taskLabel = taskItem.querySelector("span");
         const buttons = taskItem.querySelectorAll("button");
-        const editButton = buttons[0];
-        const deleteButton = buttons[1];
+
+        let editButton;
+        let deleteButton;
+
+        if (buttons.length === 1) {
+            deleteButton = buttons[0];
+
+            editButton = document.createElement("button");
+            editButton.textContent = "EDIT";
+
+            taskItem.insertBefore(editButton, deleteButton);
+        } else {
+            editButton = Array.from(buttons).find(function (button) {
+                return button.textContent === "EDIT";
+            });
+
+            deleteButton = Array.from(buttons).find(function (button) {
+                return button.textContent === "DELETE";
+            });
+        }
 
         editButton.addEventListener("click", function () {
-            const taskLabel = taskItem.querySelector("span");
-
             const newTask = prompt(
                 "Edit your task:",
                 taskLabel.textContent
@@ -110,6 +126,7 @@ function loadTasks() {
         });
     });
 
+    saveTasks();
     updateTaskCount();
 }
 
